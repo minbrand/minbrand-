@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça sua parte</title>
+
+    <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+
+    <style>
+        .container {
+            overflow: auto;
+            /* Permite rolagem dentro do container, caso o conteúdo ultrapasse a altura */
+        }
+
+
+        html,
+        body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1dc02b;
+            color: white;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .imagem-crianca {
+            width: 60%;
+            border-radius: 10px;
+            margin: 20px 0;
+            margin-bottom: -7px;
+
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 40px 0 20px 0;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .contador-texto {
+            color: #1dc02b
+        }
+
+
+
+        .progress-bar {
+            height: 100%;
+            background-color: #1dc02b;
+            width: 0%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            transition: width 0.5s;
+        }
+
+        .contador-texto {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .historia {
+            text-align: left;
+            background: #eaeaea9c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .historia h2 {
+            color: #1dc02b;
+            font-size: 24px;
+
+        }
+
+        .video-container {
+            margin-top: 30px;
+            max-width: 250px;
+            /* Define a largura máxima */
+            width: 100%;
+            /* Faz com que o vídeo se ajuste ao tamanho do container */
+            /*height: auto; /* Mantém a proporção do vídeo */
+            margin-top: 60px;
+            /* Afastando o vídeo do texto da história */
+            text-align: center;
+            /* Centraliza o conteúdo dentro do container */
+            margin: 0 auto;
+            /* Centraliza o vídeo */
+            display: block;
+            /* Garante que o vídeo seja tratado como bloco */
+        }
+
+        .botoes-doacao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .botao {
+            background-color: #1dc02b;
+            color: white;
+            padding: 12px 0;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            width: 180px;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Media query para telas pequenas (celulares) */
+        @media (max-width: 768px) {
+            .botoes-doacao {
+                flex-direction: row;
+                /* Coloca os botões em linha */
+                justify-content: space-evenly;
+                /* Distribui os botões igualmente */
+            }
+
+            .botao {
+                width: 45%;
+                /* Faz com que cada botão ocupe metade da largura */
+            }
+        }
+
+
+        .botao:hover {
+            background-color: #1dc02b;
+        }
+
+        .mensagem-extra {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #eaeaea9c;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 100px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .doe {
+            text-align: left;
+            background: #eaeaea9c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .doe h2 {
+            color: #000000;
+            /* Verde */
+        }
+
+        .incentivo h1 {
+            margin-top: 60px;
+        }
+
+
+        footer {
+            background-color: #1dc02b;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 17px;
+        }
+    </style>
+    <script>
+        let valorAtual = 12432786; // Defina o valor inicial aqui
+        const meta = 17000000;
+
+        function atualizarContador() {
+            let porcentagem = (valorAtual / meta) * 100;
+            document.getElementById('progress-bar').style.width = porcentagem + '%';
+            document.getElementById('progress-bar').innerText = `${porcentagem.toFixed(2)}%`;
+            let contadorTexto = document.getElementById('contador-texto');
+            contadorTexto.innerText = `Arrecadado: R$${valorAtual.toLocaleString('pt-BR')} de R$${meta.toLocaleString('pt-BR')}`;
+            contadorTexto.style.color = '#1dc02b'; // Altera a cor do valor para verde
+        }
+
+
+        function ativarSom(video) {
+            video.muted = false;
+            video.play();
+        }
+
+        window.onload = atualizarContador;
+    </script>
+
+
+    <!-- Meta Pixel Code -->
+    
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+    <header>
+        Campanha de Doação
+    </header>
+    <div class="container">
+        <h1>Ajude o Caetano e o Joaquim</h1>
+        <p>Sua doação pode fazer a diferença na vida destas crianças. Contribua com um valor e ajude no tratamento.</p>
+        <img src="images/img1.png" alt="Criança que precisa de ajuda" class="imagem-crianca">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="contador-texto" id="contador-texto"></div>
+
+        <div class="historia">
+            <h2>A História de Caetano e Joaquim</h2>
+            <p>Meu nome é Karla, sou casada e mãe de dois meninos, o Caetano com 17 anos e o Joaquim com 4.
+
+                Os dois são portadores de uma doença rara e degenerativa chamada Distrofia Muscular de Duchenne.<br><br>
+
+                Meninos com Duchenne possuem uma falha genética que afeta na produção de uma proteína muito importante
+                para os músculos chamada distrofina. Eles não produzem essa proteína e isso vai enfraquecendo
+                gradativamente a força de todos os músculos do corpo, inclusive os vitais<br><br>
+
+
+
+                Nos primeiros anos eles apresentam dificuldade pra subir escada, pular e correr... com o passar do
+                tempo, perdem a capacidade de caminhar, precisando de cadeira de rodas.
+
+                Depois de anos sem nenhuma opção de medicamento para tratar a Duchenne de forma que curasse ou mudasse
+                significativamente o curso da doença, fora do país a FDA aprovou um medicamento único chamado Elevidys
+                que faz o organismo passe a produzir a distrofina, porém numa escala menor e isso faz que eles
+                praticamente sejam curados! O Elevidys é o medicamento mais caro do mundo! Custando em média 16-17
+                milhões de reais!!!<br><br>
+
+
+
+                Após saber que algumas crianças já conseguiram judicialmente esse medicamento no Brasil mesmo sem a
+                aprovação da ANVISA, decidimos entrar com uma ação também. Pois a cada dia que passa, essa doença vai
+                tirando a vida dos meus filhos.
+
+                TEMOS URGÊNCIA!!!
+
+                Por isso estou aqui em nome dos meus filhos pedindo humildemente AJUDA!
+
+                Qualquer quantia é bem vinda!
+            </p>
+        </div>
+
+        <div class="doe">
+            <h2>Doando acima de R$50 Reais, nós e os empresários parceiros iremos contribuir com o dobro da sua doação
+                para atingir a meta ainda mais rápido!</h2>
+        </div>
+
+        <div class="video-container">
+
+
+            <video width="100%" controls="" autoplay="" muted="" playsinline="">
+                <source src="media/vid1.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <div class="incentivo">
+            <h1>Qual o valor você gostaria de contribuir?</h1>
+        </div>
+
+        <div class="botoes-doacao">
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$25</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$30</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$40</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$50</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$70</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$100</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$150</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$180</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$200</a>
+            <a href="https://pagamento.konihi.com/checkout?product=6f99f882-05ba-11f0-8fa3-46da4690ad53"
+                class="botao">Doar R$300</a>
+        </div>
+
+        <div class="mensagem-extra">
+            <p>Através dessa vaquinha do instituto Mãos do Bem, estamos buscando apoio financeiro para custear
+                tratamentos vitais e impulsionar a pesquisa em terapias genéticas.<br><br>
+
+
+
+                Sua doação não apenas faz a diferença, ela representa a construção de um futuro com menos dor para ter
+                uma vida feliz!<br><br>
+
+
+
+                Faça sua parte, doar é amar, Deus te dará tudo em dobro!</p>
+        </div>
+
+    </div>
+    <footer>
+        © 2025 Campanha de Doação | Todos os direitos reservados
+    </footer>
+
+</body>
+
+</html>
