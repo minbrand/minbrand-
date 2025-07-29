@@ -1,309 +1,942 @@
-<html><head>
-        
-    <meta charset="utf-8">
-    <title>Minbrand</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ferramentas, Cursos e Serviços pra quem quer faturar sujo no digital.">
+  <title>MinBrand | Agência de Guerra Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <link href='https://cx.minbrand.com/favicon.ico' rel='icon' type='image/x-icon' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --red-primary: #d10000;
+      --red-secondary: #8b0000;
+      --red-dark: #5a0000;
+    }
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMjkwMjIxX25lZ3JvMS5wbmc.webp">
-    <meta name="description" content="Os melhores conteúdos da internet de Análises, Geopolítica e Marketing Digital. ☠️ O lado negro da força para você ficar rico em até 2 anos.">
-    <meta name="keywords" content="marketing digital, minbrand">
-    <meta name="robots" content="">
-    <link rel="icon" href="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMzI2MzEyX21pbmJyYW5kZy5wbmc.webp">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Abril+Fatface&family=Acme&family=Alegreya&family=Alegreya+Sans&family=Alfa+Slab+One&family=Almarai:wght@300;400;700;800&family=Amiri+Quran&family=Amatic+SC:wght@400;700&family=Amiri&family=Antic+Slab&family=Anton&family=Architects+Daughter&family=Archivo&family=Archivo+Black&family=Archivo+Narrow&family=Arimo&family=Armata&family=Arvo&family=Asap:wght@400;700&family=Assistant&family=Balsamiq+Sans:wght@400;700&family=Bangers&family=Barlow+Condensed&family=Barlow+Semi+Condensed&family=Barlow:wght@400;700;900&family=Bebas+Neue&family=BenchNine&family=Bitter:wght@400;700;900&family=Bree+Serif&family=Cabin&family=Cabin+Condensed&family=Cabin:wght@400;700&family=Cairo:wght@400;700&family=Cantarell&family=Cardo&family=Catamaran&family=Caveat&family=Chakra+Petch&family=Changa:wght@200..800&family=Chivo&family=Cinzel&family=Comfortaa&family=Concert+One&family=Cookie&family=Cormorant+Garamond:wght@400;700&family=Courgette&family=Crete+Round&family=Crimson+Text:wght@400;700&family=Cuprum&family=DM+Sans&family=DM+Serif+Display&family=Dancing+Script:wght@400;700&family=Didact+Gothic&family=Domine&family=Dosis&family=EB+Garamond&family=Economica&family=Exo&family=Exo+2&family=Fira+Sans+Condensed&family=Fira+Sans:wght@400;700;900&family=Fjalla+One&family=Francois+One&family=Frank+Ruhl+Libre&family=Gloria+Hallelujah&family=Great+Vibes&family=Gudea&family=Hammersmith+One&family=Handlee&family=Heebo&family=Hind&family=Hind+Madurai&family=Hind+Siliguri&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=IBM+Plex+Serif&family=Inconsolata&family=Indie+Flower&family=Inter&family=Istok+Web&family=Josefin+Sans:wght@400;700&family=Josefin+Slab&family=Jost&family=Kalam&family=Kanit&family=Karla&family=Kaushan+Script&family=Lato:wght@400;700;900&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;700;900&family=Lilita+One&family=Lobster&family=Lobster+Two&family=Lora:wght@400;700&family=Luckiest+Guy&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Manrope&family=Martel:wght@400;700;900&family=Maven+Pro&family=Merriweather+Sans&family=Merriweather:wght@400;700;900&family=Monda&family=Montserrat+Alternates&family=Montserrat:wght@400;700;900&family=Mukta:wght@400;700&family=Mulish&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Neuton&family=News+Cycle&family=Noticia+Text&family=Noto+Color+Emoji&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+HK&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700;900&family=Noto+Sans+SC&family=Noto+Sans+TC&family=Noto+Sans:wght@400;700&family=Noto+Serif+JP&family=Noto+Serif:wght@400;700&family=Nunito+Sans:wght@200;300;400;700;900&family=Nunito:wght@300;400;700;900&family=Old+Standard+TT:wght@400;700&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;700&family=Orbitron&family=Oswald:wght@400;700&family=Outfit&family=Overpass:wght@400;700;900&family=Oxygen:wght@300;400;700&family=PT+Sans+Caption&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Pacifico&family=Passion+One&family=Pathway+Gothic+One&family=Patrick+Hand&family=Patua+One&family=Paytone+One&family=Permanent+Marker&family=Philosopher&family=Play&family=Playfair+Display+SC&family=Playfair+Display:wght@400;700;900&family=Plus+Jakarta+Sans&family=Poiret+One&family=Pontano+Sans&family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Prata&family=Prompt&family=Public+Sans&family=Quattrocento&family=Quattrocento+Sans&family=Questrial&family=Quicksand&family=Rajdhani&family=Raleway:wght@400;700;900&family=Red+Hat+Display&family=Reem+Kufi:wght@400..700&family=Righteous&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono&family=Roboto+Slab:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rokkitt&family=Ropa+Sans&family=Rubik:ital,wght@0,400;0,700;1,900&family=Russo+One&family=Sacramento&family=Saira+Condensed&family=Sanchez&family=Sarabun&family=Satisfy&family=Secular+One&family=Shadows+Into+Light&family=Signika+Negative&family=Signika:wght@400;700&family=Slabo+27px&family=Source+Code+Pro:wght@400;700;900&family=Source+Sans+3&family=Source+Sans+Pro:wght@400;700;900&family=Source+Serif+Pro:wght@400;700;900&family=Space+Grotesk&family=Special+Elite&family=Tajawal:wght@400;700;900&family=Tangerine&family=Teko&family=Tinos&family=Titillium+Web:wght@400;700;900&family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&family=Varela+Round&family=Volkhov&family=Vollkorn&family=Work+Sans:wght@400;700;900&family=Yanone+Kaffeesatz&family=Yantramanav&family=Yellowtail&family=Zilla+Slab&display=swap" rel="stylesheet">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
     
-    <link href="css/inpage_published.css" rel="stylesheet">
-    <!-- Meta Pixel Code -->
-<script type="text/javascript" async="" defer="" src="js/matomo.js"></script><script async="" src="js/fbevents.js"></script><script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '726248753189810');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=726248753189810&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-      <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-     
-     
-     <script type="text/javascript">
-        window.websiteurl = "https://minbrand.groovepages.com/10xconversions/";
-        var megamenuEvent = new Event('megamenuLoaded');
-
-        function setPageUrl(button,page,queryString) {
-          var pageUrl = site.pages[page]?.url;
-          button.setAttribute('href', pageUrl + (queryString || ''));
-        }
-
-        function urlWithQueryParam(linkHREF) {
-      if( linkHREF.match(/^(http|https)?:\/\//i) ) {
-        var newQuery = window.location.search.substring(1);
-        if (linkHREF.includes(newQuery)) return linkHREF;
-        var baseLink = linkHREF.split('?')[0];
-        var existingQuery = linkHREF.split('?')[1] || '';
-        var hash = baseLink.split('#')[1] || existingQuery.split('#')[1] || '';
-        baseLink = baseLink.split('#')[0];
-        existingQuery = existingQuery.split('#')[0];
-        newQuery = newQuery ? '&' + newQuery : '';
-
-        var hashStr = hash ? '#' + hash : '';
-        var queryStr = existingQuery || newQuery ? '?' + existingQuery + newQuery : '';
-
-        return baseLink + queryStr + hashStr;
-      }
-
-      return linkHREF;
+    body {
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(139, 0, 0, 0.2) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(209, 0, 0, 0.2) 0%, transparent 20%);
+      z-index: -1;
     }
 
-        
-      function openQuickPopup(id,config,popupFrame) {
-        const popupClosebutton = '<button class="quick-popup-close-'+(config.closeButton || 'small')+'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>Close</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" transform="translate(0.5 0.5)" fill="#dcdcea" stroke="#dcdcea"><line fill="none" stroke="#dcdcea" stroke-miterlimit="10" x1="27" y1="5" x2="5" y2="27"></line> <line fill="none" stroke="#dcdcea" stroke-miterlimit="10" x1="27" y1="27" x2="5" y2="5"></line></g></svg></button>';
+   header {
+  background-image: url("https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/img/fundo-minb.jpg");
+  background-repeat: no-repeat;      /* Impede a repetição */
+  background-size: cover;            /* Cobre toda a área */
+  background-position: center;       /* Centraliza a imagem */
+  background-attachment: scroll;     /* Comportamento padrão de rolagem (opcional) */
+}
+    
+    .header-glow {
+      text-shadow: 0 0 15px rgba(209, 0, 0, 0.7);
+    }
 
-        if( document.body.classList.contains('gpblsh') ) {
-          if( !document.querySelector('[data-gp-quick-popup-id="'+id+'"]') ) {
-            var quickPopupWrapper = document.createElement('div');
-            quickPopupWrapper.setAttribute('data-gp-quick-popup-id', id);
-            quickPopupWrapper.classList.add('hidden-popup');
-
-            var quickPopupWrapperInner = document.createElement('div');
-            quickPopupWrapperInner.innerHTML = popupClosebutton;
-            quickPopupWrapperInner.style = "width:"+(config.width || 625)+"px";
-
-            popupFrame.classList.add('popupframe');
-            quickPopupWrapperInner.prepend(popupFrame);
-            quickPopupWrapper.prepend(quickPopupWrapperInner);
-
-            document.body.prepend(quickPopupWrapper);
-            quickPopupWrapper.classList.remove('hidden-popup');
-
-
-            if (config.appearingAnimation) {
-              quickPopupWrapper.children[0].classList.add(config.appearingAnimation);
-              quickPopupWrapper.children[0].classList.add('animated');
-            }
-
-            quickPopupWrapper.addEventListener('click', e => {
-              if(config.leavingAnimation) {
-                quickPopupWrapper.children[0].classList.add(config.leavingAnimation);
-                quickPopupWrapper.children[0].classList.add('animated');
-                setTimeout(() => {
-                    quickPopupWrapper.children[0].classList.remove(config.leavingAnimation);
-                    quickPopupWrapper.classList.add('hidden-popup');
-                },1000);
-              } else {
-                quickPopupWrapper.classList.add('hidden-popup');
-              }
-            });
-          } else {
-            document.querySelector('[data-gp-quick-popup-id="'+id+'"]').classList.remove('hidden-popup');
-          }
-        }
+    /* Novos estilos para cards de casos */
+    .case-card {
+      background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 1px solid #333;
+      position: relative;
+    }
+    
+    .case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(209, 0, 0, 0.3);
+    }
+    
+    .case-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3);
+    }
+    
+    .stat-card {
+      background: rgba(20, 20, 20, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--red-primary), var(--red-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 5px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      letter-spacing: 1px;
+      border: 2px solid transparent;
+    }
+    
+    .btn-red {
+      background: linear-gradient(135deg, var(--red-primary), var(--red-secondary));
+      color: white;
+      box-shadow: 0 5px 15px rgba(209, 0, 0, 0.4);
+    }
+    
+    .btn-red:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(209, 0, 0, 0.6);
+    }
+    
+    .btn-red::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+      z-index: -1;
+    }
+    
+    .btn-red:hover::after {
+      left: 100%;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: var(--red-primary);
+      border-radius: 2px;
+    }
+    
+    .card {
+      background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #333;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(209, 0, 0, 0.3);
+      border-color: var(--red-primary);
+    }
+    
+    .card-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-bottom: 2px solid var(--red-primary);
+    }
+    
+    .card-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #fff;
+      font-weight: 700;
+    }
+    
+    .card-text {
+      color: #bbb;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    
+    .guarantee-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin: 15px 0;
+      box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .guarantee-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 3px solid var(--red-primary);
+      border-bottom: 3px solid var(--red-primary);
+      margin: 50px 0;
+    }
+    
+    .footer {
+      background: #0a0a0a;
+      padding: 40px 20px 20px;
+      border-top: 3px solid var(--red-primary);
+    }
+    
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #222;
+      color: var(--red-primary);
+      border-radius: 50%;
+      margin: 0 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      background: var(--red-primary);
+      color: white;
+      transform: translateY(-5px);
+    }
+    
+    /* NEWSLETTER STYLE UPDATE */
+    .newsletter-form {
+      background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .newsletter-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    
+    .newsletter-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--red-primary);
+      border-radius: 2px;
+    }
+    
+    .newsletter-input {
+      width: 100%;
+      padding: 15px 20px;
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--red-primary);
+      box-shadow: 0 0 0 3px rgba(209, 0, 0, 0.3);
+    }
+    
+    .newsletter-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, var(--red-primary), var(--red-secondary));
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    
+    .newsletter-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(209, 0, 0, 0.6);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
       }
-     </script>
-     <script>window.site||window.encodeSite||(window.encodeSite=function(e,s){return e.pages=JSON.parse(atob(e.pages)),window.site=function(e){try{const s={...e.pages}||{};return new Proxy({},{})instanceof Object?(delete e.pages,e.isProxy=!0,new Proxy(e,{pages:s,get(e,s){return"pages"===s&&s in this.pages?this.pages[s]:"pages"===s?this.pages:s in e?e[s]:void 0},set:(e,s,t)=>(e[s]=t,!0)})):void 0}catch(e){}const s={...e.pages}||{};if(new Proxy({},{})instanceof Object)return delete e.pages,e.isProxy=!0,new Proxy(e,{pages:s,get(e,s){return"pages"===s&&s in this.pages?this.pages[s]:"pages"===s?this.pages:s in e?e[s]:void 0},set:(e,s,t)=>(e[s]=t,!0)})}(e),window.site});</script>
-     
-        
-      <!-- Matomo -->
-      <script type="text/javascript">
-        var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-        _paq.push(["setCookieDomain", "*.localhost"]);
-        _paq.push(["setDomains", ["*.localhost"]]);
-        _paq.push(['setCustomDimension', 1, "637c5ea5d2648d081519cfc2"]);
-        _paq.push(['setCustomDimension', 2, "Wp4WDWVqW"]);
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-          var u="//matomo.groovetech.io/";
-          _paq.push(['setTrackerUrl', u+'matomo.php']);
-          _paq.push(['setSiteId', '4']);
-          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-          g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-      </script>
-      <noscript><p><img src="//matomo.groovetech.io/matomo.php?idsite=4&rec=1" style="border:0;" alt="" /></p></noscript>
-      <!-- End Matomo Code -->
-      <link data-gp-stylesheet="" href="css/index.css" rel="stylesheet">
-        </head>
-      <body data-gp-site-id="637c5ea5d2648d081519cfc2" data-gp-style="" class="gpblsh">
-        <!-- Start Popups -->
-        <script> if(!window.mergeContentSettings) { function mergeContentSettings(){}}</script>
-        
-        <!-- End Popups -->
-        
-    
-    <div id="IE-warning">
-      <div class="IE-warning-message">
-        <p><i class="fas fa-exclamation-triangle" style="color:red;"></i> Oops! Sorry!!</p> <br>
-        <p>This site doesn't support Internet Explorer. Please <a href="https://browser-update.org/update-browser.html?force_outdated=true">use a modern browser</a> like Chrome, Firefox or Edge.</p>
-      </div>
-    </div>
-    <script id="IE-check">
-      (function() {
-        if (!!window.navigator.userAgent.match(/MSIE|Trident/)) {
-          document.getElementById("IE-warning").style.display = "block";
-        } else {
-          document.getElementById("IE-warning").remove();
-        }
-      })();
-    </script><div id="custom-top">
       
-    </div><script>
-      (function() {
-        var populateSiteSettings = async function() {
-          if (window.encodeSite) {
-            const result = await encodeSite({"pages":"eyJsMjhrWUo0OFEiOnsidXJsIjoicGFnZS0xIn0sIkw1bHgzekpjbSI6eyJ1cmwiOiJvYmctYm9sZXRvIn0sImFnalhHQ0V3NiI6eyJ1cmwiOiJvYnJpZ2Fkby0xMHgifSwiWjNiWjNXN2xoIjp7InVybCI6IjA5LW1vZGVsb3MifSwiT2hIQzRDdW10Ijp7InVybCI6InZpZGVvMS13cHlkemRmcGIifSwibklncVNUWWotIjp7InVybCI6ImluZGV4LWFvZ2Z1ZXJjNSJ9LCI2dktiMmVVRGciOnsidXJsIjoiaW5kZXgtYW9nZnVlcmM1In0sIlg5X25VbzFyaiI6eyJ1cmwiOiJ3ZWJpbmFyLWNvbmZpcm1hdGlvbi1wYWdlLWFvZ2Z1ZXJjNSJ9LCJkR0xveTJyZy0iOnsidXJsIjoid2ViaW5hci1icm9hZGNhc3QtcGFnZS1hb2dmdWVyYzUifSwianVFZWxWMVVpIjp7InVybCI6IndlYmluYXItY2hlY2tvdXQtcGFnZS1hb2dmdWVyYzUifSwiQ0drV1BhOG5WIjp7InVybCI6IndlYmluYXItbXVsdGktaHlicmlkLW90by1wYWdlLWFvZ2Z1ZXJjNSJ9LCJxelZGWm1fZjAiOnsidXJsIjoid2ViaW5hci1kb3duc2VsbC1wYWdlLWFvZ2Z1ZXJjNSJ9LCJZQnM0Wk1kalkiOnsidXJsIjoid2ViaW5hci10aGFuay15b3UtcGFnZS1hb2dmdWVyYzUifSwiVDQ0M1FkRzI5Ijp7InVybCI6InBhZ2UtNiJ9LCJ3aVBoTUhvREkiOnsidXJsIjoicGFnZS0yIn0sIlhmR1ZiQm15eiI6eyJ1cmwiOiJwYWdlLTkifSwiU0R1eGowd2ZqIjp7InVybCI6InBhZ2UtMTAifSwiQjBESUh4ek5fIjp7InVybCI6InBhZ2UtMTEifSwiWHVBQlo1TjJOIjp7InVybCI6InBhZ2UtMTIifSwiV3A0V0RXVnFXIjp7InVybCI6ImluZGV4In19","popups":[],"navigation":[{"url":"page-2","name":"Page 8","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-1","name":"10X Conversions","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"obg-boleto","name":"Obrigado","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"obrigado-10x","name":"Obrigado","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"09-modelos","name":"09 Modelos de carta de vendas de alta conversão","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-6","name":"Page 6","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-9","name":"Page 9","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-10","name":"Page 10","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-11","name":"Framework de Validação","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"page-12","name":"Page 12","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]},{"url":"index","name":"minbrand","megamenu":null,"megamenuHideScreens":[],"megamenuAlignment":null,"megamenuMaxWidth":null,"children":[]}],"baseURL":"https://v1.gdapis.com/api"}, "637c5ea5d2648d081519cfc2");
-            if(!window.inBuilder && window.websiteurl) {
-              const separator = window.websiteurl.charAt(window.websiteurl.length-1) === '/'?'':'/';
+      .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 
-              for (const page in window.site.pages) {
-                window.site.pages[page].url = window.websiteurl + separator + window.site.pages[page]?.url;
-              }
-            }
-            if (window.site) window.encodeSite = undefined;
-            site.subscribed = [];
-            site.subscribe = callback => {
-              site.subscribed.push(callback);
-            };
-            var clearSiteCheck = setInterval(function() {
-              if (window.site.isProxy) {
-                window.dispatchEvent(new Event('settingsLoaded'));
-                clearInterval(clearSiteCheck);
-              }
-            }, 250);
-          }
-        };
-        document.readyState !== 'loading' ? populateSiteSettings() : document.addEventListener("DOMContentLoaded", populateSiteSettings);
-      })();
-    </script><div id="page-container" data-gp-page-id="Wp4WDWVqW">
-      <div class="blocks-container" id="blocks-container">
-        
-        
-        
-        
-        
-      
-            <section class="gp-component gp-component-id-0uV2msCUN" data-gp-block="true" data-gp-block-data="{}" data-gp-component="block" data-gp-style="" data-gp-component-id="0uV2msCUN" id="0uV2msCUN" tabindex="0"><a name="0uV2msCUN" data-gp-block-anchor=""></a>
-              <div data-section-overlay=""></div>
-              <div class="gp-component-id-vuR7T7yEJ container gp-component" data-gp-container="" data-gp-style="" data-gp-component-id="vuR7T7yEJ" data-gp-component="container" tabindex="0"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzQ2Mzc4ODY1X21pbmJyYW5kYnIud2VicA.webp" alt="" class="inline-flex items-start justify-start object-cover object-center gp-component gp-component-id-oU3ASRmDZ" data-gp-style="" data-gp-dnd="" data-gp-component="image" data-gp-component-id="oU3ASRmDZ" tabindex="0"><div class="gp-text-container gp-component gp-component-id-H5Cqy5Zk6b" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="H5Cqy5Zk6b" data-gp-component="null" tabindex="0"><p class="gp-component-id-jNg50ZF6l" data-id="quill-node-0">Os melhores conteúdos da galáxia ☠️</p></div><a class="inline-flex items-start justify-start object-cover object-center overflow-hidden gp-component gp-component-id-VZmeFVHIsT" data-gp-button-id="rGdN1vFWg" data-gp-style="" data-gp-dnd="" href="https://sl.minbrand.com/lado-negro/" target="_blank" rel="noopener noreferrer" data-gp-component="image" data-gp-component-id="VZmeFVHIsT"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMjkxMzY0X0Rlc2lnbnNlbW5vbWUyMDI1MDYzMFQxMDQxNTcxNDcud2VicA.webp" alt="lado negro do marktng" class="object-cover object-center"> </a><a class="inline-flex items-start justify-start object-cover object-center overflow-hidden gp-component gp-component-id-sCgnwzW36Z" data-gp-button-id="9ESKAhBsF" data-gp-style="" data-gp-dnd="" href="https://pay.actuspay.com/checkout-white-6961/?add-to-cart=6961" target="_blank" rel="noopener noreferrer" data-gp-component="image" data-gp-component-id="sCgnwzW36Z"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMjkyNTQzX0Rlc2lnbnNlbW5vbWUyMDI1MDYzMFQxMTA1NDM3OTUxLndlYnA.webp" alt="lado negro do marktng" class="object-cover object-center"> </a></div>
-            </section><section class="gp-component-id-NbOCKgNDYd gp-component" data-gp-component="block" data-gp-style="" data-gp-block-id="12252" data-gp-block="true" data-gp-block-data="{" id":12252,"type":"block","thumbnail":"https:="" assets.grooveapps.com="" elements-previews="" thumbs="" empty.png","category":"empty="" blocks","tag":"wireframe","user_id":"global","filename":"_empty_0","height":0,"global":1,"tailwind":1,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="NbOCKgNDYd" data-gp-block-type="block" style="" id="NbOCKgNDYd" tabindex="0"><a name="NbOCKgNDYd" data-gp-block-anchor=""></a>
-        <div class="" data-section-overlay=""></div>
-        <div class="gp-component gp-component-id-c5gWBjt2sB" data-gp-container="" data-gp-style="true" data-gp-component-id="c5gWBjt2sB" data-gp-component="container" tabindex="0"><a href="https://wa.me/5583994066143" data-gp-button-id="iPtCviBWB" class="topdragger items-center animate__repeat animate__onreveal pulse no-animation gp-component gp-component-id-sva758geBI" data-gp-style="" data-gp-dnd="" data-gp-animation-duration="1s" data-gp-component="button" data-gp-component-id="sva758geBI">
-    
-    <div style="display: inline-block; flex-grow: 1;">
-      <div class="gp-component gp-component-id-xRfGN9UPWI" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="xRfGN9UPWI">Fala comigo</div>
-      
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-59TCPFBWHC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-59TCPFBWHC');
+</script>
+
+</head>
+<body>
+  <!-- HERO HEADER -->
+  <header class="relative py-20 px-4 md:px-8 text-center overflow-hidden">
+    <div class="absolute inset-0 bg-black opacity-70 z-0"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+      <div class="absolute top-1/4 right-20 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
+      <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+      <div class="absolute bottom-1/3 right-1/3 w-4 h-4 bg-red-600 rounded-full animate-ping"></div>
     </div>
-    <div style="display: inline-block; vertical-align: top; position: relative; align-self: stretch; padding: 12px; margin-left:10px;"><span class="fab fa-whatsapp" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: inherit;"></span></div>
-    
-  </a><a class="inline-flex items-start justify-start object-cover object-center overflow-hidden gp-component gp-component-id-bi4ddZeSk" data-gp-button-id="hc1aiMH-e" data-gp-style="" data-gp-dnd="" href="https://sl.minbrand.com/growth/" target="_blank" rel="noopener noreferrer" data-gp-component="image" data-gp-component-id="bi4ddZeSk"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMjkzMzc2X1NBSUJBTUFJUy53ZWJw.webp" alt="" class="object-cover object-center"> <script id="script-8JqGv2ubg">
-            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
-              window.addEventListener(myEvent, (e) => {
-                const link = document.querySelector('[data-gp-button-id="hc1aiMH-e"]');
-                if( link ){
-                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
-                  link.setAttribute('href',urlWithQueryParam(linkHREF));
-                }
-              });
-            });
-          </script></a><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@minbrand?sub_confirmation=1" data-gp-button-id="3VXyB6JCB" class="topdragger items-center gp-component gp-component-id-dtCwf5HFIm" data-gp-style="" data-gp-dnd="" data-gp-component="button" data-gp-component-id="dtCwf5HFIm">
-    <div style="display: inline-block; vertical-align: top; position: relative; align-self: stretch; padding: 12px; margin-right:1px;"><span class="fab fa-youtube" style="position: absolute; left: 0; top: 1%; transform: translateY(-1%); font-size: 1.5rem; color: inherit;"></span></div>
-    <div style="display: inline-block; flex-grow: 1;">
-      <div class="gp-component gp-component-id-sXP7E2O5_7" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="sXP7E2O5_7">Nosso canal no Youtube</div>
-      
-    </div>
-    
-    <script id="script-Gnev-b_fW">
-            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
-              window.addEventListener(myEvent, (e) => {
-                const link = document.querySelector('[data-gp-button-id="3VXyB6JCB"]');
-                if( link ){
-                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
-                  link.setAttribute('href',urlWithQueryParam(linkHREF));
-                }
-              });
-            });
-          </script>
-  </a><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/minbrandmedia/" data-gp-button-id="doro-QRiC" class="topdragger items-center gp-component gp-component-id-5TjIy01LEi" data-gp-style="" data-gp-dnd="" data-gp-component="button" data-gp-component-id="5TjIy01LEi">
-    <div style="display: inline-block; vertical-align: top; position: relative; align-self: stretch; padding: 12px; margin-right:5px;"><span class="fab fa-instagram" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: inherit;"></span></div>
-    <div style="display: inline-block; flex-grow: 1;">
-      <div class="gp-component gp-component-id-p2E7XEZU_q" data-gp-component="button main-label" data-gp-style="" data-gp-component-id="p2E7XEZU_q">Nosso Insta</div>
-      
-    </div>
-    
-    <script id="script-PrnxOWktf">
-            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
-              window.addEventListener(myEvent, (e) => {
-                const link = document.querySelector('[data-gp-button-id="doro-QRiC"]');
-                if( link ){
-                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
-                  link.setAttribute('href',urlWithQueryParam(linkHREF));
-                }
-              });
-            });
-          </script>
-  </a><a class="inline-flex items-start justify-start object-cover object-center overflow-hidden gp-component gp-component-id-kz2M9Gw7DV" data-gp-button-id="h3eaIJacP" data-gp-style="" data-gp-dnd="" href="https://sl.minbrand.com/minwrite/?src=linkbio" target="_blank" rel="noopener noreferrer" data-gp-component="image" data-gp-component-id="kz2M9Gw7DV"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMzA2NjUxX1NBSUJBTUFJUzEud2VicA.webp" alt="" class="object-cover object-center"> <script id="script-HsUK3BFeE">
-            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
-              window.addEventListener(myEvent, (e) => {
-                const link = document.querySelector('[data-gp-button-id="h3eaIJacP"]');
-                if( link ){
-                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
-                  link.setAttribute('href',urlWithQueryParam(linkHREF));
-                }
-              });
-            });
-          </script></a><a class="inline-flex items-start justify-start object-cover object-center overflow-hidden gp-component gp-component-id-UTHyLBquMc" data-gp-button-id="X3PNasaVs" data-gp-style="" data-gp-dnd="" href="https://pay.actuspay.com/checkout-white-6943/?add-to-cart=6943" target="_blank" rel="noopener noreferrer" data-gp-component="image" data-gp-component-id="UTHyLBquMc"><img src="images/aHR0cHM6Ly9hc3NldHMuZ3Jvb3ZlYXBwcy5jb20vaW1hZ2VzL2NiMDhkYWUwLTQ2ZjQtNGIwYS1hY2UxLTU2NmFmYjI2NDY0MS8xNzUxMzA3MDkwX1NBSUJBTUFJUzIucG5n.webp" alt="" class="object-cover object-center"> <script id="script-dNZa3Jadb">
-            ['settingsLoaded','megamenuLoaded'].forEach(myEvent => {
-              window.addEventListener(myEvent, (e) => {
-                const link = document.querySelector('[data-gp-button-id="X3PNasaVs"]');
-                if( link ){
-                  const linkHREF = link.hasAttribute('href') ? link.getAttribute('href') : '';
-                  link.setAttribute('href',urlWithQueryParam(linkHREF));
-                }
-              });
-            });
-          </script></a></div>
-    </section><section class="gp-component gp-component-id-0PUad5bEG" data-gp-component="block" data-gp-style="" data-gp-block-id="12342224" data-gp-block="true" data-gp-block-data="{" id":12342224,"type":"block","thumbnail":"="" assets.grooveapps.com="" pages-previews="" 641f11fb03ca2.png","category":"newsletter","tag":"modern","user_id":"global","filename":null,"height":740,"global":1,"tailwind":0,"created_at":"2025-02-13="" 16:26:16"}"="" data-gp-component-id="0PUad5bEG" data-gp-block-type="block" id="0PUad5bEG" tabindex="0" style=""><a name="0PUad5bEG" data-gp-block-anchor=""></a>
-        <div class="" data-section-overlay=""></div>
-        <div class="gp-component gp-component-id-FaAxAQjsCe" data-gp-container="" data-gp-style="true" data-gp-component-id="FaAxAQjsCe" data-gp-component="container" tabindex="0"><div class="gp-component gp-component-id-uvXigcBTTO" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="uvXigcBTTO" tabindex="0"><div class="gp-text-container gp-component gp-component-id-SYNNKqps3c" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="SYNNKqps3c" data-gp-component="null" tabindex="0" style=""><h2 class="gp-component-id-5oqAmJgM1V" data-id="quill-node-0">minha newsletter</h2></div><div class="gp-text-container gp-component gp-component-id-JuBmlsVFFB" data-gp-style="true" data-gp-text="true" data-gp-dnd="true" data-gp-component-id="JuBmlsVFFB" data-gp-component="null" tabindex="0" style=""><h2 class="gp-component-id-MLxUYc5hFt" data-id="quill-node-0">Receba nosso conteúdo em seu email totalmente grátis... por enquanto.</h2></div><div class="gp-component gp-component-id-fgfsfNtG8t" data-gp-container="" data-gp-style="true" data-gp-dnd="" data-gp-component="container" data-gp-component-id="fgfsfNtG8t" tabindex="0"><form class="gp-component gp-component-id-xoKWnwJcyA" action="http://portal1.ipzmarketing.com/f/DgCUVe8JPhI" method="post" data-gp-dnd="" data-gp-style="" data-gp-component="form-container" data-gp-component-id="xoKWnwJcyA"></form><div class="gp-component-id-Zz_IBBYIE gp-component" data-gp-container="" data-gp-style="" data-gp-dnd="" data-gp-component="container" data-gp-component-id="Zz_IBBYIE"><div data-gp-dnd="" data-gp-embed="" data-gp-component="embed" class="gp-component-id-sorEqjTTD gp-component" data-gp-component-id="sorEqjTTD" gp-embed-content="<iframe data-skip-lazy=" "="" src="https://portal1.ipzmarketing.com/f/DgCUVe8JPhI" frameborder="0" scrolling="no" width="100%">
-<script data-cfasync="false" type="text/javascript" src="js/iframe_v1.js"></script>" style=""><iframe data-skip-lazy="" src="https://portal1.ipzmarketing.com/f/DgCUVe8JPhI" frameborder="0" scrolling="no" width="100%" class="ipz-iframe"></iframe>
-<script data-cfasync="false" type="text/javascript" src="js/iframe_v1.js"></script></div></div></div></div></div>
-    </section>
-          
-      
-      
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <div class="flex justify-center mb-8">
+        <img src="https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/images/minbrand-logobranca.png" 
+             alt="MinBrand Logo" 
+             class="w-40">
       </div>
-      <div id="blocks-staging" style="top: 0px; left: 0; position: absolute;"></div>
-    </div>
-    <div id="custom-bottom">
+        <p>⚠️ SÓ ENTRA QUEM TEM SANGUE NO OLHO E QUER SE DESTACAR NO MERCADO</p>
+      <h1 class="hero-title text-4xl md:text-6xl font-black mb-6 text-white header-glow">
+        <span class="text-red-600">DOMINAÇÃO</span> DIGITAL COM COPY QUE <span class="text-red-600">EMOCIONA</span>
+      </h1>
       
-    </div>
-    <script>
-      (function() {
-        var callSiteCallbacks = function() {
-          if(window.site && window.site.subscribed) {
-            site.subscribed.forEach(callback => {
-              callback();
-            });
-          }
-        };
-        document.readyState !== 'loading' ? callSiteCallbacks() : document.addEventListener("DOMContentLoaded", callSiteCallbacks);
-      })();
-    </script>
-    <script src="js/inpage_published.js"></script>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">Não vendemos sonhos. Vendemos <span class="text-red-500 font-bold">RESULTADOS BRUTAIS.</span>
+      <br>
+        Ferramentas, Cursos e Serviços pra quem quer <span class="text-red-500 font-bold">FATURAR ALTO</span> no digital.
+      </p>
+      
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <!-- Botão alterado para "NOSSOS SERVIÇOS" com ícone de maleta -->
+        <a href="#servicos" class="btn btn-red">
+          <i class="fas fa-briefcase mr-2"></i> NOSSOS SERVIÇOS
+        </a>
         
+        <!-- Botão alterado para levar à seção de produtos -->
+        <a href="#produtos" class="btn bg-gray-900 text-white border border-gray-700 hover:bg-gray-800">
+          <i class="fas fa-fire mr-2"></i> ACESSAR CONTEÚDOS
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- GARANTIA SECTION -->
+  <div class="guarantee-section">
+    <div class="max-w-4xl mx-auto">
+      <div class="guarantee-badge">
+        <i class="fas fa-shield-alt mr-2"></i> OFERTA ESPECIAL
+      </div>
       
-    
-    </body></html>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        <span class="text-red-500">50% DE DESCONTO</span> NO PRIMEIRO MÊS
+      </h2>
+      
+      <p class="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+        Teste nossos serviços por 30 dias com <span class="font-bold">metade do preço</span>. Se não gostar do nosso serviço ou do seu resultados, não assine nenhum contrato!
+      </p>
+      
+      <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-6">
+        <i class="fas fa-check-circle text-red-500 mr-2"></i> Sem riscos - Sem compromisso - Sem enrolação
+      </p>
+      
+      <!-- CTA WhatsApp adicionada abaixo da garantia -->
+      <a href="https://wa.me/5583994066143" 
+         class="btn btn-red inline-block px-8 py-3 text-lg">
+        <i class="fab fa-whatsapp mr-2"></i> FALE CONOSCO PELO WHATSAPP
+      </a>
+    </div>
+  </div>
+
+  <!-- PRODUTOS -->
+  <section id="produtos" class="py-16 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-white">
+        🔥 TREINAMENTOS COM VAGAS ABERTAS
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Produto 1 -->
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/img/sdr-closer.jpg" 
+               alt="SDR/Closer" 
+               class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Formação ao vivo de SDR/CLOSER</h3>
+            <p class="card-text">
+              Curso direto ao ponto pra transformar criativo em dinheiro. Aprenda a criar anúncios que arrancam grana da carteira.
+            </p>
+            <div class="mt-auto">
+              <a href="https://pay.actuspay.com/checkout-white-6961/?add-to-cart=6961" 
+                 class="btn btn-red w-full text-center">
+                QUERO ESSE AGORA
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 2 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1350&q=80" 
+               alt="Tráfego Blindado" 
+               class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">TRÁFEGO BLINDADO</h3>
+            <p class="card-text">
+              Método comprovado para escalar campanhas de ads sem queimar grana. Aprenda a segmentar como um hacker.
+            </p>
+            <div class="mt-auto">
+              <a href="https://pay.actuspay.com/checkout-white-6961/?add-to-cart=6961" 
+                 class="btn btn-red w-full text-center">
+                QUERO ESSE AGORA
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 3 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=1350&q=80" 
+               alt="Copy Assassina" 
+               class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">COPY ASSASSINA</h3>
+            <p class="card-text">
+              Escreva textos que hipnotizam e convertem. Técnicas de copywriting que vendem até para quem não quer comprar.
+            </p>
+            <div class="mt-auto">
+              <a href="https://pay.actuspay.com/checkout-white-6961/?add-to-cart=6961" 
+                 class="btn btn-red w-full text-center">
+                QUERO ESSE AGORA
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Outros Produtos -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-center mb-8 text-gray-300">
+          <i class="fas fa-fire text-red-500 mr-2"></i> OUTRAS ARMAS DO ARSENAL
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <a href="#" class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition border border-gray-800">
+            <i class="fas fa-funnel-dollar text-red-500 text-2xl mb-2"></i>
+            <span class="font-bold">Funil da Morte</span>
+          </a>
+          
+          <a href="#" class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition border border-gray-800">
+            <i class="fas fa-brain text-red-500 text-2xl mb-2"></i>
+            <span class="font-bold">Gatilhos Brutais</span>
+          </a>
+          
+          <a href="#" class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition border border-gray-800">
+            <i class="fas fa-robot text-red-500 text-2xl mb-2"></i>
+            <span class="font-bold">Automação Killer</span>
+          </a>
+          
+          <a href="#" class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition border border-gray-800">
+            <i class="fas fa-chart-line text-red-500 text-2xl mb-2"></i>
+            <span class="font-bold">Scaling Sanguinário</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+   <!-- SERVIÇOS DA AGÊNCIA - ATUALIZADA -->
+  <section id="servicos" class="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-white">
+        💼 O QUE A MINBRAND FAZ PRA DESTRUIR TUA CONCORRÊNCIA?
+      </h2>
+      
+      <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+        Não somos uma agência comum. Somos <span class="text-red-500 font-bold">ESPECIALISTAS EM GUERRA DIGITAL</span>.
+        Executamos com a precisão de um <span class="text-red-500 font-bold">ASSASSINO PROFISSIONAL</span>.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Serviço 1 Atualizado -->
+        <div class="card">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-bullseye text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">🚀 TRÁFEGO ASSASSINO</h3>
+            <p class="card-text mb-4">
+              Campanhas que <span class="text-red-500 font-bold">OBRIGAM</span> a conversão. Segmentação cirúrgica, criativos brutais e ROI de 500%+. Seus concorrentes vão chorar.
+            </p>
+            <ul class="text-gray-400 space-y-2 mb-4">
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Meta/Google Ads com sangue no olho</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Criativos que hipnotizam e convertem</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Segmentação que encontra cartão escondido</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Otimização obsessiva 24/7</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Serviço 2 Atualizado -->
+        <div class="card">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-chess text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">🧠 FUNIL DE GUERRA</h3>
+            <p class="card-text mb-4">
+              Construímos ecossistemas que transformam visitantes em <span class="text-red-500 font-bold">VICIADOS</span> compradores. Do primeiro clique até a morte do cliente.
+            </p>
+            <ul class="text-gray-400 space-y-2 mb-4">
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Arquitetura de funil psicológico</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Automações que nunca falham</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Upsells infinitos e recorrência</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> CRM que manipula comportamento</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Serviço 3 Atualizado -->
+        <div class="card">
+          <div class="p-6">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mb-5">
+              <i class="fas fa-pen-fancy text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">✍️ COPY HIPNÓTICA</h3>
+            <p class="card-text mb-4">
+              Textos que <span class="text-red-500 font-bold">FORÇAM</span> a ação. Usamos gatilhos mentais que fazem o cliente <span class="text-red-500 font-bold">IMPLORAR</span> pra comprar.
+            </p>
+            <ul class="text-gray-400 space-y-2 mb-4">
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Psicologia da persuasão extrema</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Scripts de vendas assassinos</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> Landing pages que convertem 20%+</li>
+              <li><i class="fas fa-check-circle text-red-500 mr-2"></i> E-mails que vendem dormindo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Garantia de Resultados -->
+      <div class="mt-16 p-8 bg-black rounded-xl border-2 border-red-900">
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">
+            <span class="text-red-500">🎯 RESULTADO GARANTIDO</span> OU SEU DINHEIRO DE VOLTA
+          </h3>
+          
+          <p class="text-xl text-gray-300 mb-8">
+            Não fazemos promessas vazias como os coaches de Instagram. Nossos clientes <span class="text-red-500 font-bold">FATURAM SUJO</span> ou devolvemos cada centavo.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="stat-card">
+              <div class="stat-number">500%+</div>
+              <div class="text-gray-300">ROI Médio dos Clientes</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-number">R$ 50M+</div>
+              <div class="text-gray-300">Faturamento Gerado</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-number">300+</div>
+              <div class="text-gray-300">Empresas Dominadas</div>
+            </div>
+          </div>
+          
+          <!-- Imagem de certificações atualizada -->
+          <img src="https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/img/Solution%20Parner.png" 
+               alt="Certificações MinBrand" 
+               class="mx-auto h-16 mb-8">
+          
+          <a href="https://wa.me/5583994066143" 
+             class="btn btn-red inline-block px-10 py-4 text-lg">
+            <i class="fas fa-skull-crossbones mr-2"></i> QUERO DOMINAR O MERCADO
+          </a>
+          
+          <p class="text-gray-500 mt-4 text-sm">
+            ⚠️ Vagas limitadas. Só trabalhamos com quem tem <span class="text-red-500">AMBIÇÃO REAL</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES DE SUCESSO -->
+  <section class="py-16 px-4 md:px-8 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-white">
+        🏆 CASES DE SUCESSO
+      </h2>
+      
+      <p class="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+        Confira alguns dos resultados que geramos para os nossos clientes.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Case 1 -->
+        <div class="case-card">
+          <div class="case-badge">ROAS 3.397,46%</div>
+          <img src="https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/img/case-eco-18-mai-a-14-set.webp" 
+               alt="Case Infoprodutor" 
+               class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Infoprodutor após nossa mentoria</h3>
+            <div class="bg-gray-800 p-4 rounded-lg mb-4">
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Investimento:</span> R$ 9.170,00</p>
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Cliques:</span> 15.500</p>
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Faturamento:</span> R$ 312.000,00</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-block bg-gradient-to-r from-green-500 to-green-700 text-black font-bold px-4 py-2 rounded-full">
+                ROAS de ↑3.397,46%
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Case 2 -->
+        <div class="case-card">
+          <div class="case-badge">ROAS 5.317,88%</div>
+          <img src="https://minbrand.com/wp-content/uploads/2025/07/case-eco-18-mai-a-14-set.webp" 
+               alt="Case Imobiliário" 
+               class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Cliente do setor imobiliário</h3>
+            <div class="bg-gray-800 p-4 rounded-lg mb-4">
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Investimento:</span> R$ 35.600,00</p>
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Cliques:</span> 38.700</p>
+              <p class="text-gray-300"><span class="text-red-500 font-bold">Faturamento:</span> R$ 1.890.000,00</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-block bg-gradient-to-r from-green-500 to-green-700 text-black font-bold px-4 py-2 rounded-full">
+                ROAS de ↑5.317,88%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="https://wa.me/5583994066143" 
+           class="btn bg-gray-800 text-white hover:bg-gray-700 border border-gray-700">
+          <i class="fas fa-chart-line mr-2"></i> VER TODOS OS CASES DE SUCESSO
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVIÇOS DA AGÊNCIA 
+  <section id="servicos" class="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-white">
+        💼 O QUE A MINBRAND FAZ PRA TI?
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        
+        <div class="card">
+          <div class="p-6 text-center">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fas fa-bullseye text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">🚀 TRÁFEGO PAGO</h3>
+            <p class="card-text">
+              Campanhas agressivas, com segmentação suja, criativos com CTA bruto e conversão alta. A gente enfia teu anúncio no olho de quem tem cartão no bolso.
+            </p>
+          </div>
+        </div>
+        
+        
+        <div class="card">
+          <div class="p-6 text-center">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fas fa-chess text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">🧠 ESTRATÉGIA & FUNIL</h3>
+            <p class="card-text">
+              Montamos um ecossistema onde cada lead que respira vira uma venda. Do anúncio à recorrência, tudo automatizado e otimizando lucro.
+            </p>
+          </div>
+        </div>
+        
+        
+        <div class="card">
+          <div class="p-6 text-center">
+            <div class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mx-auto mb-5">
+              <i class="fas fa-pen-fancy text-2xl text-red-500"></i>
+            </div>
+            <h3 class="card-title">✍️ COPY E VENDAS</h3>
+            <p class="card-text">
+              Escrevemos igual traficante de atenção: hipnotiza, prende e converte. Vende pra mente fraca, cansa até quem tenta resistir.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-16">
+        
+        <img src="https://minbrand.com/wp-content/uploads/2025/07/Design-sem-nome-2025-07-26T123249.174.png" 
+             alt="Certificações MinBrand" 
+             class="mx-auto h-16 mb-8">
+        
+        <a href="https://wa.me/5583994066143" 
+           class="btn btn-red inline-block px-10 py-4 text-lg">
+          <i class="fas fa-skull-crossbones mr-2"></i> QUERO DOMINAR O DIGITAL COM VOCÊS
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- NEWSLETTER ATUALIZADA -->
+  <section class="py-16 px-4 md:px-8 bg-gray-900">
+    <div align="center" class="max-w-3xl mx-auto">
+      <h2 class="section-title text-3xl font-bold text-center text-white">
+        📩 ENTRE PRA LISTA VIP
+      </h2>
+      
+      <p class="text-xl text-gray-300 text-center mb-10">
+        Receba conteúdos sujos, estratégias novas e ofertas ocultas direto na tua caixa de entrada. 
+        <span class="text-red-500 font-bold">Nada de spam</span>, só os gatilhos certos pra te deixar rico.
+      </p>
+      
+      <!-- Formulário Brevo com novo design -->
+      <div class="newsletter-form">
+        <div class="sib-form-container">
+          <div class="sib-container">
+            <form id="sib-form" method="POST" action="https://4d641bd8.sibforms.com/serve/MUIFAE_6ScgIr2Rrw7RGiFb9ok1LAckI0IL33w6-UpLgR6iY6ALg3kbguppEBnfTZoCiZuFyKlbHoaQp_A4_wlToLuhR72CBflTyJTZi_9yusyv-nMBsKL6F283ybehBYtxy6aqgl9KcHy4_QStzkzedA0340JJRwtM9acTx5yCuD7Y0ImvQpALgUQqk4tBoH6vwv04evV15StHL">
+              <h3 class="newsletter-title">INSIRA SEU EMAIL</h3>
+              
+              <div class="mb-6">
+                <input class="newsletter-input" 
+                       type="email" 
+                       id="EMAIL" 
+                       name="EMAIL" 
+                       autocomplete="off" 
+                       placeholder="Seu melhor e-mail aqui..." 
+                       required>
+              </div>
+              
+              <button class="newsletter-btn" type="submit">
+                <i class="fas fa-paper-plane mr-2"></i> QUERO CONTEÚDOS SUJOS!
+              </button>
+              
+              <input type="text" name="email_address_check" value="" class="input--hidden">
+              <input type="hidden" name="locale" value="pt">
+              <input type="hidden" name="html_type" value="simple">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="py-16 px-4 md:px-8 bg-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-title text-3xl md:text-4xl font-bold text-center text-white">
+        🧠 CONTEÚDO PRA MUDAR TEU JOGO
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <!-- Artigo 1 -->
+        <a href="https://google.com" class="card group">
+          <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c16ebeb4-0bb5-45e3-bbbb-a5a97e43d326/como-produzir-conteudo-infinito.jpg" class="w-full h-40 object-cover" alt="Copywriting">
+          <div class="card-content">
+            <h3 class="card-title group-hover:text-red-500 transition">Como produzir conteúdo infinito</h3>
+            <p class="card-text">A melhor forma de produzir conteúdo para internet.</p>
+            <div class="mt-4 text-red-500 font-bold flex items-center">
+              Ler Artigo <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Artigo 2 -->
+        <a href="https://minbrand.beehiiv.com/p/ate-onde-ou-quando-devo-continuar-perseguindo-um-lead-inbound" class="card group">
+          <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,fit=scale-down,onerror=redirect/uploads/asset/file/d5b9fee4-2d9f-422b-92aa-eb53d70abffc/upejy.jpg" class="w-full h-40 object-cover" alt="Marketing agressivo">
+          <div class="card-content">
+            <h3 class="card-title group-hover:text-red-500 transition">Até onde eu devo perseguir o lead?</h3>
+            <p class="card-text">É jogo é sujo, mas é lucrativo. Sempre foi.</p>
+            <div class="mt-4 text-red-500 font-bold flex items-center">
+              Ler Artigo <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Artigo 3 -->
+        <a href="https://minbrand.beehiiv.com/p/voce-nao-vai-vender-para-ninguem-se-nao-resolver-isso" class="card group">
+          <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,fit=scale-down,onerror=redirect/uploads/asset/file/2e03356a-f387-4fe6-9b16-8a8de21d917b/f0sopb4qe4tdtwkiiz5aqxeoqppj.jpeg" class="w-full h-40 object-cover" alt="Validação de oferta">
+          <div class="card-content">
+            <h3 class="card-title group-hover:text-red-500 transition">Você não vai vender se não resolver isso</h3>
+            <p class="card-text">Resolva isso para poder vender todos os dias.</p>
+            <div class="mt-4 text-red-500 font-bold flex items-center">
+              Ler Artigo <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Artigo 4 -->
+        <a href="https://minbrand.beehiiv.com/p/15-anos-de-marketing-digital" class="card group">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG0Wb6fKe-hXTzoF-juzqo_K8J6QrZS5DiWhrCz5DKujLLfYKTYq5FMepCPZRbJtHrIiWjw1svhTJOE2gm0LYlHkr6GXaO0Wudt5HVGhTPYIRKxAQI3bnzvbxUAKxAlfwinlTdbs30a71phCRzB8q85Mr2JLm0LplvUgPGvpzZLDctiFYfAz6le4-_Nr0/s16000-rw/empreender-online-digital-marketing.jpeg" class="w-full h-40 object-cover" alt="Backend infoprodutor">
+          <div class="card-content">
+            <h3 class="card-title group-hover:text-red-500 transition">15 anos de marketing digital</h3>
+            <p class="card-text">São 15 anos ensinando pessoas a ganhar dinheiro.</p>
+            <div class="mt-4 text-red-500 font-bold flex items-center">
+              Ler Artigo <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER ATUALIZADO -->
+  <footer class="footer">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="md:col-span-2">
+          <img src="https://raw.githubusercontent.com/minbrand/minbrand-/refs/heads/main/images/minbrand-logobranca.png" 
+               alt="MinBrand Logo" 
+               class="w-40 mb-6">
+          <p class="text-gray-400 mb-6">
+            Ferramentas, Cursos e Serviços pra quem quer faturar sujo no digital. Aqui não tem espaço pra fracos.
+          </p>
+          <div class="flex">
+            <!-- Redes sociais atualizadas -->
+            <a href="https://www.youtube.com/" class="social-icon" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="social-icon" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#newsletter" class="social-icon">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">PRODUTOS</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Criativos que Convertem</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Tráfego Blindado</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Copy Assassina</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition">Funil da Morte</a></li>
+          </ul>
+        </div>
+        
+        <!-- Nova coluna de SERVIÇOS -->
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">SERVIÇOS</h4>
+          <ul class="space-y-2">
+            <li><a href="#servicos" class="text-gray-400 hover:text-red-500 transition">Tráfego Pago</a></li>
+            <li><a href="#servicos" class="text-gray-400 hover:text-red-500 transition">Estratégia & Funil</a></li>
+            <li><a href="#servicos" class="text-gray-400 hover:text-red-500 transition">Copy e Vendas</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">CONTATO</h4>
+          <ul class="space-y-2">
+            <!-- Email atualizado -->
+            <li class="text-gray-400">
+              <i class="fas fa-envelope mr-2 text-red-500"></i> comercial@minbrand.com
+            </li>
+            <li class="text-gray-400">
+              <i class="fab fa-whatsapp mr-2 text-red-500"></i> (83) 99406-6143
+            </li>
+          </ul>
+          
+          <a href="https://portal.minbrand.com" class="inline-block mt-6 bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-lg transition">
+            <i class="fas fa-lock-open mr-2"></i> Área do Aluno
+          </a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+        <p class="text-gray-500">
+          minbrand.com © 2025 Todos os direitos reservados. Aqui é guerra, porra.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5583994066143" 
+     class="fixed bottom-6 right-6 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center shadow-lg z-50 animate-bounce">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+</body>
+</html> 
