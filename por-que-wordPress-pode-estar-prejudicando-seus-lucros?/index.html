@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por Que o WordPress Pode Estar PREJUDICANDO Seus Lucros?</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== VARIÁVEIS DE CORES ===== */
+        :root {
+            --bg-dark: #2a2a2a;
+            --bg-darker: #000;
+            --accent: #d10000;
+            --text-light: #ffffff;
+            --text-muted: #f5f5f5;
+            --border-radius: 8px;
+        }
+
+        /* ===== RESET E ESTILOS GERAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* ===== LAYOUT ===== */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Margens laterais para mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+                /* Margens laterais para mobile */
+            }
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: var(--bg-darker);
+            padding: 15px 0;
+            border-bottom: 2px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: block;
+            max-width: 140px;
+            /* Largura máxima da logo */
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 50px 0 30px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-darker), var(--bg-dark));
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            padding: 0 10px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            padding: 0 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #b00000;
+            transform: translateY(-2px);
+        }
+
+        /* ===== BLOG CONTENT ===== */
+        .blog-content {
+            padding: 30px 0;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 30px;
+            /* Tamanho reduzido para a foto */
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            overflow: hidden;
+            border: 1px solid var(--accent);
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== TIPOGRAFIA ===== */
+        h2 {
+            font-size: 1.8rem;
+            margin: 25px 0 12px;
+            color: var(--text-light);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 20px 0 12px;
+            color: var(--text-light);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: var(--text-muted);
+        }
+
+        /* ===== VIDEO CONTAINER ===== */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 25px 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ===== HIGHLIGHT BOX ===== */
+        .highlight-box {
+            background: linear-gradient(to right, rgba(209, 0, 0, 0.1), rgba(209, 0, 0, 0.05));
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* ===== BLOCKQUOTE ===== */
+        blockquote {
+            position: relative;
+            padding: 25px 15px 25px 35px;
+            margin: 25px 0;
+            color: var(--text-muted);
+            border-left: 3px solid var(--accent);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        blockquote:before {
+            content: "" ";
+ position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 3.5rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        /* ===== IMAGE ===== */
+        .post-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin: 25px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== SOCIAL SHARE ===== */
+        .social-share {
+            display: flex;
+            gap: 10px;
+            margin: 35px 0;
+            justify-content: center;
+        }
+
+        .social-share a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-share a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* ===== BOTÃO DE AÇÃO NO FINAL ===== */
+        .action-button {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--bg-darker);
+            padding: 30px 0 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: block;
+            max-width: 100px;
+            /* Largura máxima da logo no rodapé */
+            margin: 0 auto 15px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 8px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .post-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Mais espaçamento nas laterais para mobile */
+            .hero,
+            .blog-content,
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-content">
+            <!-- Logo -->
+            <a href="https://minbrand.com" class="logo">
+                <img src="https://minbrand.com/img/minbrand-b.webp"
+                    alt="MinBrand Logo">
+            </a>
+            <button class="mobile-menu-btn" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="https://minbrand.com">Início</a></li>
+                    <li><a href="https://minbrand.com/blog">Artigos</a></li>
+                    <li><a href="https://minbrand.com/sobre">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="container">
+            <h1>Por Que o WordPress Pode Estar PREJUDICANDO Seus Lucros?</h1>
+            <p>Muitos empresários estão travados no operacional enquanto deveriam focar em vender.</p>
+            <a href="#post" class="cta-button">Ler Artigo Completo</a>
+        </div>
+    </section>
+
+    <!-- ===== BLOG CONTENT ===== -->
+    <main class="blog-content container" id="post">
+        <div class="post-meta">
+            <div class="author">
+                <!-- Foto de perfil com tamanho reduzido -->
+                <div class="author-img">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnai69d3kCAAHa9D7WfyGMXs5KEuLd0C7lJczKnHQk_1L1m_jWaH7cODRisBcQhqvW1dnapAgNBTOOV1rx9kBNtDT-nOrYrvFNFC3m2WA9YaHEGPHXM7oZiFmfjCFOY0wENBp8wVVq5flHLdTrAljjvy-AMzINbDeRBaV78Slu_5zHJjo/w66-h66-p-k-no-nu-rw/misterjota.jpeg"
+                        alt="Jota">
+                </div>
+                <div>
+                    <div>Jota</div>
+                    <div>Especialista em Marketing e Investimentos</div>
+                </div>
+            </div>
+            <div class="date">30 de Julho de 2025 · 18 min de leitura</div>
+        </div>
+
+       <!--<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1470" alt="Revolução Digital"
+            class="post-image"> -->
+
+        <p>Muitos iniciantes estão travados no operacional por causa do wordpress e acabam não focando em ganhar dinheiro</p>
+
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/qUPRTVNixsU" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+       
+
+        <!--<div class="highlight-box">
+            <p>Segundo pesquisas recentes, até 2030, 85% dos empregos que existirão ainda não foram inventados. A
+                adaptabilidade será a habilidade mais valiosa no mercado de trabalho futuro.</p>
+        </div>
+
+        <h2>Blockchain Além das Criptomoedas</h2>
+
+        <p>A tecnologia blockchain revolucionou o setor financeiro com as criptomoedas, mas seu potencial vai muito
+            além. Sistemas descentralizados estão transformando setores como logística, saúde e até mesmo governança.
+        </p>
+
+        <blockquote>
+            "A blockchain representa a segunda geração da internet e promete transformar nossa sociedade de forma tão
+            profunda quanto a própria internet fez." - Vitalik Buterin, Criador do Ethereum
+        </blockquote>
+
+        <h2>Privacidade na Era Digital</h2>
+
+        <p>Com o aumento da coleta de dados, a privacidade se tornou uma preocupação central. Novas regulamentações como
+            a LGPD no Brasil e o GDPR na Europa estão estabelecendo padrões mais rigorosos para proteção de dados
+            pessoais.</p>-->
+
+        <!-- Botão de ação no final do post -->
+        <div class="action-button">
+            <a href="https://minbrand.com/" class="cta-button">Conheça nossa empresa</a>
+        </div>
+
+        <div class="social-share">
+            <a href="#" title="Compartilhar no Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER SIMPLIFICADO ===== -->
+    <footer>
+        <div class="container footer-content">
+            <!-- Logo no rodapé com largura máxima de 100px -->
+            <a href="https://minbrand.com" class="footer-logo">
+                <img src="https://minbrand.com/img/minbrand-b.webp"
+                    alt="MinBrand Logo">
+            </a>
+
+            <div class="copyright">
+                &copy; <span id="current-year"></span> MinBrand. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MENU MOBILE TOGGLE =====
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+
+            // Change icon
+            const icon = menuToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // ===== SCROLL SUAVE PARA ÂNCORAS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== ANO ATUAL NO RODAPÉ =====
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
