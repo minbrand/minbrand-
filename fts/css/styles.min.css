@@ -396,14 +396,17 @@ body::before {
     transition: all .5s ease
 }
 
-.navBar img.logotipo-er,
-.navBar img.logotipo-ji {
+
+.navBar img.logotipo-ac,
+.navBar img.logotipo-mb,
+.navBar img.logotipo-ne,
+.navBar img.logotipo-ji  {
     max-width: 120px;
     aspect-ratio: 102/24
 }
 
-.navBar img.logotipo-opt {
-    max-width: 105px;
+.navBar img.logotipo-st {
+    max-width: 135px;
     aspect-ratio: 89/24
 }
 
@@ -416,6 +419,12 @@ body::before {
     max-width: 150px;
     margin-top: 7px;
     aspect-ratio: 127.5/15.1
+}
+
+.navBar img.logotipo-sd {
+    max-width: 150px;
+    margin-top: 7px;
+    aspect-ratio: 127.5/15.42
 }
 
 .navBar img.logotipo-sd {
