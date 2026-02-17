@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://minbrand.com/sitemap.xml
